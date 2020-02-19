@@ -16,7 +16,8 @@ zuul:
     #api-a api-b是自定义的名字
     api-a:
       path: /api/a/**
-      serviceId: hello-spring-cloud-web-admin-ribbon
+      serviceId: first-ribbon
     api-b:
       path: /api/b/**
-      serviceId: hello-spring-cloud-web-admin-feign
+      serviceId: first-feign
+
