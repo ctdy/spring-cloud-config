@@ -1,6 +1,6 @@
 spring:
   application:
-    name: hello-spring-cloud-eureka
+    name: first-eureka
   #    在默认情况下 Erureka Server 也是一个 Eureka Client ,必须要指定一个 Server
   boot:
     admin:
