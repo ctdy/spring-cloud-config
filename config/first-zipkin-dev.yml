@@ -9,6 +9,7 @@ spring:
 server:
   port: 9411
 
+
 eureka:
   client:
     serviceUrl:
@@ -19,3 +20,10 @@ management:
     web:
       server:
         auto-time-requests: false
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
