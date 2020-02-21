@@ -4,7 +4,7 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8084
+        url: http://111.229.201.69:8084
 
 server:
   port: 9411
@@ -13,7 +13,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://111.229.201.69:8761/eureka/
 
 management:
   metrics:
