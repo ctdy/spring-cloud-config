@@ -1,23 +1,34 @@
 spring:
   application:
     name: first-eureka
-  zipkin:
-    base-url: http://111.229.201.69:9411
-  #    在默认情况下 Erureka Server 也是一个 Eureka Client ,必须要指定一个 Server
-#  boot:
-#    admin:
-#      client:
-#        url: http://localhost:8084
+#  zipkin:
+#    base-url: http://111.229.201.69:9411
+#  #    在默认情况下 Erureka Server 也是一个 Eureka Client ,必须要指定一个 Server
+##  boot:
+##    admin:
+##      client:
+##        url: http://localhost:8084
+#server:
+#  port: 8761
+#management:
+#  endpoint:
+#    health:
+#      show-details: always
+#  endpoints:
+#    web:
+#      exposure:
+#        include: health,info
+#
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
 server:
   port: 8761
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: health,info
 
 eureka:
   instance:
@@ -26,4 +37,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
