@@ -22,4 +22,4 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://111.229.201.69:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
