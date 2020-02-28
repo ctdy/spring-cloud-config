@@ -21,9 +21,9 @@ management:
 
 eureka:
   instance:
-    hostname: 111.229.201.69
+    hostname: localhost
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://111.229.201.69:${server.port}/eureka/
+      defaultZone: ${instance.hostname}:${server.port}/eureka/
